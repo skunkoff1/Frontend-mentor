@@ -1,5 +1,62 @@
 // sass -w assets/sass:assets/css
-
 @use 'cards';
-
 @import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+.container {
+    width: 1440px;
+    margin: auto;
+}
+
+.container,
+.upper,
+.lower {
+    display: flex;
+}
+
+body {
+    background-color: $body;
+    color: white;
+    font: {
+        family: 'Rubik', sans-serif;
+        size: 18px;
+    }
+}
+
+.weekly {
+    display: none;
+}
+
+.monthly {
+    display: none;
+}
+
+.main {
+    background-color: $card;
+    width: 270px;
+    height: 550px;
+    border-radius: 15px;
+    margin: 15px;
+    .profile {
+        background-color: $blue;
+        height: 70%;
+        border-radius: 15px;
+        img {
+            width: 80px;
+            border: 5px solid white;
+            border-radius: 50%;
+            margin: 30px;
+        }
+        p,
+        h1 {
+            margin-left: 30px;
+            font-weight: 400;
+        }
+    }
+    .button-div {
+        display: flex;
+        flex-direction: column;
+        a {
+            margin: 20px 0px 0px 30px;
+        }
+    }
+}

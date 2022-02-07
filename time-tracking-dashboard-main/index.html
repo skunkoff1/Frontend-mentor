@@ -2,207 +2,208 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/css/default.css">
 
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="left">
-      <div class="main">
-        <div class="profile">
-          <img src="">
-          <p>Report for</p>
-          <h1>Jeremy Robson</h1>
+    <div class="container">
+        <div class="left">
+            <div class="main">
+                <div class="profile">
+                    <img src="./assets/images/image-jeremy.png">
+                    <p>Report for</p>
+                    <h1>Jeremy Robson</h1>
+                </div>
+                <div class="button-div">
+                    <a class="button">Daily</a>
+                    <a class="button">Weekly</a>
+                    <a class="button">Monthly</a>
+                </div>
+            </div>
         </div>
-        <div class="button-div">
-          <button type="button" class="button">Daily</button>
-          <button type="button" class="button">Weekly</button>
-          <button type="button" class="button">Monthly</button>
+        <div class="right">
+            <div class="upper">
+                <div class="work">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="./assets/images/icon-work.svg">
+                        </div>
+                        <div class="daily">
+                            <p>work</p>
+                            <a class="point">...</a>
+                            <h1 class="work-time">5hrs</h1>
+                            <p class="work-last">Previous - 7hrs</p>
+                        </div>
+                        <div class="weekly">
+                            <p>work</p>
+                            <a class="point">...</a>
+                            <h1 class="work-time">32hrs</h1>
+                            <p class="work-last">Previous - 36hrs</p>
+                        </div>
+                        <div class="monthly">
+                            <p>work</p>
+                            <a class="point">...</a>
+                            <h1 class="work-time">103hrs</h1>
+                            <p class="work-last">Previous - 128hrs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="play">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="./assets/images/icon-play.svg">
+                        </div>
+                        <div class="daily">
+                            <p>play</p>
+                            <a class="point">...</a>
+                            <h1 class="play-time">1hr</h1>
+                            <p class="play-last">Previous - 2hrs</p>
+                        </div>
+                        <div class="weekly">
+                            <p>play</p>
+                            <a class="point">...</a>
+                            <h1 class="play-time">10hrs</h1>
+                            <p class="play-last">Previous - 8hrs</p>
+                        </div>
+                        <div class="monthly">
+                            <p>play</p>
+                            <a class="point">...</a>
+                            <h1 class="play-time">23hrs</h1>
+                            <p class="play-last">Previous - 29hrs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="study">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="./assets/images/icon-study.svg">
+                        </div>
+                        <div class="daily">
+                            <p>study</p>
+                            <a class="point">...</a>
+                            <h1 class="study-time">0hrs</h1>
+                            <p class="study-last">Previous - 1hr</p>
+                        </div>
+                        <div class="weekly">
+                            <p>study</p>
+                            <a class="point">...</a>
+                            <h1 class="study-time">4hrs</h1>
+                            <p class="study-last">Previous - 7hrs</p>
+                        </div>
+                        <div class="monthly">
+                            <p>study</p>
+                            <a class="point">...</a>
+                            <h1 class="study-time">13hrs</h1>
+                            <p class="study-last">Previous - 19hrs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower">
+                <div class="exercise">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="./assets/images/icon-exercise.svg">
+                        </div>
+                        <div class="daily">
+                            <p>exercise</p>
+                            <a class="point">...</a>
+                            <h1 class="exercise-time">1hr</h1>
+                            <p class="exercise-last">Previous - 1hr</p>
+                        </div>
+                        <div class="weekly">
+                            <p>exercise</p>
+                            <a class="point">...</a>
+                            <h1 class="exercise-time">4hrs</h1>
+                            <p class="exercise-last">Previous - 5hrs</p>
+                        </div>
+                        <div class="monthly">
+                            <p>exercise</p>
+                            <a class="point">...</a>
+                            <h1 class="exercise-time">11hrs</h1>
+                            <p class="exercise-last">Previous - 18hrs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="./assets/images/icon-social.svg">
+                        </div>
+                        <div class="daily">
+                            <p>social</p>
+                            <a class="point">...</a>
+                            <h1 class="social-time">1hr</h1>
+                            <p class="social-last">Previous - 3hrs</p>
+                        </div>
+                        <div class="weekly">
+                            <p>social</p>
+                            <a class="point">...</a>
+                            <h1 class="social-time">5hrs</h1>
+                            <p class="social-last">Previous - 10hrs</p>
+                        </div>
+                        <div class="monthly">
+                            <p>social</p>
+                            <a class="point">...</a>
+                            <h1 class="social-time">21hrs</h1>
+                            <p class="social-last">Previous - 23hrs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="self-care">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="./assets/images/icon-self-care.svg">
+                        </div>
+                        <div class="daily">
+                            <p>self care</p>
+                            <a class="point">...</a>
+                            <h1 class="self-care-time">0hrs</h1>
+                            <p class="self-care-last">Previous - 1hr</p>
+                        </div>
+                        <div class="weekly">
+                            <p>self care</p>
+                            <a class="point">...</a>
+                            <h1 class="self-care-time">2hrs</h1>
+                            <p class="self-care-last">Previous - 2hrs</p>
+                        </div>
+                        <div class="monthly">
+                            <p>self care</p>
+                            <a class="point">...</a>
+                            <h1 class="self-care-time">7hrs</h1>
+                            <p class="self-care-last">Previous - 11hrs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="right">
-      <div class="upper">
-        <div class="work">
-          <div class="card">
-            <div class="card-header">
-              <img src="./assets/images/icon-work.svg">
-            </div>
-            <div class="daily">
-              <p>work</p>
-              <button type="button" class="point">...</button>
-              <h1 class="work-time">5hrs</h1>
-              <p class="work-last">Previous - 7hrs</p>
-            </div>
-            <div class="weekly">
-              <p>work</p>
-              <button type="button" class="point">...</button>
-              <h1 class="work-time">32hrs</h1>
-              <p class="work-last">Previous - 36hrs</p>
-            </div>
-            <div class="monthly">
-              <p>work</p>
-              <button type="button" class="point">...</button>
-              <h1 class="work-time">103hrs</h1>
-              <p class="work-last">Previous - 128hrs</p>
-            </div>
-          </div>
-        </div>
-        <div class="play">
-          <div class="card">
-            <div class="card-header">
-              <img src="./assets/images/icon-play.svg">
-            </div>
-            <div class="daily">
-              <p>play</p>
-              <button type="button" class="point">...</button>
-              <h1 class="play-time">1hr</h1>
-              <p class="play-last">Previous - 2hrs</p>
-            </div>
-            <div class="weekly">
-              <p>play</p>
-              <button type="button" class="point">...</button>
-              <h1 class="play-time">10hrs</h1>
-              <p class="play-last">Previous - 8hrs</p>
-            </div>
-            <div class="monthly">
-              <p>play</p>
-              <button type="button" class="point">...</button>
-              <h1 class="play-time">23hrs</h1>
-              <p class="play-last">Previous - 29hrs</p>
-            </div>
-          </div>
-        </div>
-        <div class="study">
-          <div class="card">
-            <div class="card-header">
-              <img src="./assets/images/icon-study.svg">
-            </div>
-            <div class="daily">
-              <p>study</p>
-              <button type="button" class="point">...</button>
-              <h1 class="study-time">0hrs</h1>
-              <p class="study-last">Previous - 1hr</p>
-            </div>
-            <div class="weekly">
-              <p>study</p>
-              <button type="button" class="point">...</button>
-              <h1 class="study-time">4hrs</h1>
-              <p class="study-last">Previous - 7hrs</p>
-            </div>
-            <div class="monthly">
-              <p>study</p>
-              <button type="button" class="point">...</button>
-              <h1 class="study-time">13hrs</h1>
-              <p class="study-last">Previous - 19hrs</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="lower">
-        <div class="exercise">
-          <div class="card">
-            <div class="card-header">
-              <img src="./assets/images/icon-exercise.svg">
-            </div>
-            <div class="daily">
-              <p>exercise</p>
-              <button type="button" class="point">...</button>
-              <h1 class="exercise-time">1hr</h1>
-              <p class="exercise-last">Previous - 1hr</p>
-            </div>
-            <div class="weekly">
-              <p>exercise</p>
-              <button type="button" class="point">...</button>
-              <h1 class="exercise-time">4hrs</h1>
-              <p class="exercise-last">Previous - 5hrs</p>
-            </div>
-            <div class="monthly">
-              <p>exercise</p>
-              <button type="button" class="point">...</button>
-              <h1 class="exercise-time">11hrs</h1>
-              <p class="exercise-last">Previous - 18hrs</p>
-            </div>
-          </div>
-        </div>
-        <div class="social">
-          <div class="card">
-            <div class="card-header">
-              <img src="./assets/images/icon-social.svg">
-            </div>
-            <div class="daily">
-              <p>social</p>
-              <button type="button" class="point">...</button>
-              <h1 class="social-time">1hr</h1>
-              <p class="social-last">Previous - 3hrs</p>
-            </div>
-            <div class="weekly">
-              <p>social</p>
-              <button type="button" class="point">...</button>
-              <h1 class="social-time">5hrs</h1>
-              <p class="social-last">Previous - 10hrs</p>
-            </div>
-            <div class="monthly">
-              <p>social</p>
-              <button type="button" class="point">...</button>
-              <h1 class="social-time">21hrs</h1>
-              <p class="social-last">Previous - 23hrs</p>
-            </div>
-          </div>
-        </div>
-        <div class="self-care">
-          <div class="card">
-            <div class="card-header">
-              <img src="./assets/images/icon-self-care.svg">
-            </div>
-            <div class="daily">
-              <p>self care</p>
-              <button type="button" class="point">...</button>
-              <h1 class="self-care-time">0hrs</h1>
-              <p class="self-care-last">Previous - 1hr</p>
-            </div>
-            <div class="weekly">
-              <p>self care</p>
-              <button type="button" class="point">...</button>
-              <h1 class="self-care-time">2hrs</h1>
-              <p class="self-care-last">Previous - 2hrs</p>
-            </div>
-            <div class="monthly">
-              <p>self care</p>
-              <button type="button" class="point">...</button>
-              <h1 class="self-care-time">7hrs</h1>
-              <p class="self-care-last">Previous - 11hrs</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://www.damien-didrich.com">DIDRICH Damien aka Skunkoff</a>.
-  </div>
-  <script type="text/javascript" src="./assets/js/main.js"></script>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="https://www.damien-didrich.com">DIDRICH Damien aka Skunkoff</a>.
+    </div>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
 </body>
 
 </html>
