@@ -17,12 +17,47 @@
   z-index: 30;
   position: relative;
   bottom: 25px;
+  height: 210px;
 }
-.card img {
-  margin-right: 20px;
-  width: 80px;
-  height: auto;
-  position: fixed;
+.card .daily .sub-head,
+.card .weekly .sub-head,
+.card .monthly .sub-head {
+  display: flex;
+  justify-content: space-between;
+}
+.card .daily .sub-head p,
+.card .weekly .sub-head p,
+.card .monthly .sub-head p {
+  font-size: 20px;
+  margin: 25px 0 0 30px;
+  text-transform: capitalize;
+}
+.card .daily .sub-head img,
+.card .weekly .sub-head img,
+.card .monthly .sub-head img {
+  width: 35px;
+  position: relative;
+  padding: 20px;
+  margin: 10px 10px 0 0;
+}
+.card .daily .sub-head img:hover,
+.card .weekly .sub-head img:hover,
+.card .monthly .sub-head img:hover {
+  cursor: pointer;
+  filter: brightness(0.7);
+}
+.card .daily h1,
+.card .weekly h1,
+.card .monthly h1 {
+  font-weight: 300;
+  margin: 20px 0 0 30px;
+  font-size: 4.2rem;
+}
+.card .daily p,
+.card .weekly p,
+.card .monthly p {
+  margin: 10px 0 25px 30px;
+  text-transform: capitalize;
 }
 .card .card-header {
   overflow: hidden;
@@ -30,43 +65,56 @@
   justify-content: flex-end;
   border-radius: 15px;
   position: relative;
-  height: 30%;
+  height: 80px;
   flex-shrink: 0;
 }
+.card .card-header img {
+  margin-right: 20px;
+  width: 90px;
+  position: relative;
+  bottom: 10px;
+}
+.card:hover {
+  filter: brightness(1.35);
+}
 
-.work .card-header {
+#work .card-header {
   background-color: #ff8c66;
 }
 
-.play .card-header {
+#play .card-header {
   background-color: #56c2e6;
 }
 
-.study .card-header {
+#study .card-header {
   background-color: #ff5c7c;
 }
 
-.exercise .card-header {
+#exercise .card-header {
   background-color: #4acf81;
 }
 
-.social .card-header {
+#social .card-header {
   background-color: #7536d3;
 }
 
-.self-care .card-header {
+#self-care .card-header {
   background-color: #f1c65b;
 }
 
 .container {
   width: 1440px;
+  height: 90vh;
   margin: auto;
+  margin-top: 10vh;
+  user-select: none;
 }
 
 .container,
 .upper,
 .lower {
   display: flex;
+  flex-wrap: wrap;
 }
 
 body {
@@ -74,6 +122,16 @@ body {
   color: white;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
+}
+
+.daily,
+.weekly,
+.monthly {
+  flex-direction: column;
+}
+
+.daily {
+  display: flex;
 }
 
 .weekly {
@@ -87,7 +145,7 @@ body {
 .main {
   background-color: #1c1f4a;
   width: 270px;
-  height: 550px;
+  height: 555px;
   border-radius: 15px;
   margin: 15px;
 }
@@ -113,6 +171,13 @@ body {
 }
 .main .button-div a {
   margin: 20px 0px 0px 30px;
+}
+.main .button-div a:visited {
+  color: red;
+}
+.main .button-div a:hover {
+  cursor: pointer;
+  filter: brightness(0.6);
 }
 
 /*# sourceMappingURL=default.css.map */

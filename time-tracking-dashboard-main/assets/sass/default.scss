@@ -4,13 +4,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 .container {
     width: 1440px;
+    height: 90vh;
     margin: auto;
+    margin-top: 10vh;
+    user-select: none;
 }
 
 .container,
 .upper,
 .lower {
     display: flex;
+    flex-wrap: wrap;
 }
 
 body {
@@ -20,6 +24,16 @@ body {
         family: 'Rubik', sans-serif;
         size: 18px;
     }
+}
+
+.daily,
+.weekly,
+.monthly {
+    flex-direction: column;
+}
+
+.daily {
+    display: flex;
 }
 
 .weekly {
@@ -33,7 +47,7 @@ body {
 .main {
     background-color: $card;
     width: 270px;
-    height: 550px;
+    height: 555px;
     border-radius: 15px;
     margin: 15px;
     .profile {
@@ -57,6 +71,13 @@ body {
         flex-direction: column;
         a {
             margin: 20px 0px 0px 30px;
+            &:visited {
+                color: red;
+            }
+            &:hover {
+                cursor: pointer;
+                filter: brightness(0.6);
+            }
         }
     }
 }

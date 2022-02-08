@@ -16,12 +16,35 @@
         z-index: 30;
         position: relative;
         bottom: 25px;
-    }
-    img {
-        margin-right: 20px;
-        width: 80px;
-        height: auto;
-        position: fixed;
+        height: 210px;
+        .sub-head {
+            display: flex;
+            justify-content: space-between;
+            p {
+                font-size: 20px;
+                margin: 25px 0 0 30px;
+                text-transform: capitalize;
+            }
+            img {
+                width: 35px;
+                position: relative;
+                padding: 20px;
+                margin: 10px 10px 0 0;
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(0.7);
+                }
+            }
+        }
+        h1 {
+            font-weight: 300;
+            margin: 20px 0 0 30px;
+            font-size: 4.2rem;
+        }
+        p {
+            margin: 10px 0 25px 30px;
+            text-transform: capitalize;
+        }
     }
     .card-header {
         overflow: hidden;
@@ -29,42 +52,51 @@
         justify-content: flex-end;
         border-radius: 15px;
         position: relative;
-        height: 30%;
+        height: 80px;
         flex-shrink: 0;
+        img {
+            margin-right: 20px;
+            width: 90px;
+            position: relative;
+            bottom: 10px;
+        }
+    }
+    &:hover {
+        filter: brightness(1.35);
     }
 }
 
-.work {
+#work {
     .card-header {
         background-color: $work;
     }
 }
 
-.play {
+#play {
     .card-header {
         background-color: $play;
     }
 }
 
-.study {
+#study {
     .card-header {
         background-color: $study;
     }
 }
 
-.exercise {
+#exercise {
     .card-header {
         background-color: $exercise;
     }
 }
 
-.social {
+#social {
     .card-header {
         background-color: $social;
     }
 }
 
-.self-care {
+#self-care {
     .card-header {
         background-color: $selfCare;
     }
