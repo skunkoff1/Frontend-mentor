@@ -96,28 +96,31 @@
     }
     
     @media (max-width:1250px) {
-        .container {
-            width: 1000px;
-        }
-        .left {
-            width: 90%;
-            height: 50%;
-            .main {
-                width: 100%;
-                height: 90%;
-                .profile {
-                    display: flex;
-                    height: 60%;
-                    .picture {
-                        width: 15%;
+        .super-container {
+            .container {
+                width: 1000px;
+                margin: auto;
+            }
+            .left {
+                width: 90%;
+                height: 50%;
+                .main {
+                    width: 100%;
+                    height: 90%;
+                    .profile {
+                        display: flex;
                         height: 60%;
+                        .picture {
+                            width: 15%;
+                            height: 60%;
+                        }
+                        p {
+                            margin-top: 20%;
+                        }
                     }
-                    p {
-                        margin-top: 20%;
+                    .button-div {
+                        height: fit-content;
                     }
-                }
-                .button-div {
-                    height: fit-content;
                 }
             }
         }
@@ -128,6 +131,7 @@
             width: 800px;
             flex-direction: column;
             flex-wrap: nowrap;
+            margin: auto;
         }
         .left {
             margin-bottom: 20px;

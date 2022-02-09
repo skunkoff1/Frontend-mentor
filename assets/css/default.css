@@ -231,30 +231,30 @@ body {
 }
 
 @media (max-width: 1250px) {
-  .container {
+  .super-container .container {
     width: 1000px;
+    margin: auto;
   }
-
-  .left {
+  .super-container .left {
     width: 90%;
     height: 50%;
   }
-  .left .main {
+  .super-container .left .main {
     width: 100%;
     height: 90%;
   }
-  .left .main .profile {
+  .super-container .left .main .profile {
     display: flex;
     height: 60%;
   }
-  .left .main .profile .picture {
+  .super-container .left .main .profile .picture {
     width: 15%;
     height: 60%;
   }
-  .left .main .profile p {
+  .super-container .left .main .profile p {
     margin-top: 20%;
   }
-  .left .main .button-div {
+  .super-container .left .main .button-div {
     height: fit-content;
   }
 }
@@ -263,6 +263,7 @@ body {
     width: 800px;
     flex-direction: column;
     flex-wrap: nowrap;
+    margin: auto;
   }
 
   .left {
