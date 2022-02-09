@@ -102,6 +102,43 @@
   background-color: #f1c65b;
 }
 
+@media (max-width: 1000px) {
+  .right {
+    width: 100%;
+  }
+  .right .upper {
+    width: 90%;
+    flex-direction: column;
+  }
+  .right .upper .card {
+    width: 100%;
+  }
+  .right .upper .card .lower-card {
+    display: flex;
+  }
+  .right .upper .card .lower-card p {
+    margin: 8% 0 0 40%;
+  }
+  .right .lower {
+    width: 90%;
+    flex-direction: column;
+  }
+  .right .lower .card {
+    width: 100%;
+  }
+  .right .lower .card .lower-card {
+    display: flex;
+  }
+  .right .lower .card .lower-card p {
+    margin: 8% 0 0 40%;
+  }
+}
+@media (max-width: 600px) {
+  .right .upper .card .lower-card p,
+.right .lower .card .lower-card p {
+    margin: 8% 0 0 10%;
+  }
+}
 .container {
   width: 1440px;
   height: 90vh;
@@ -154,7 +191,7 @@ body {
   height: 70%;
   border-radius: 15px;
 }
-.main .profile img {
+.main .profile .picture {
   width: 80px;
   border: 5px solid white;
   border-radius: 50%;
@@ -178,6 +215,76 @@ body {
 .main .button-div a:hover {
   cursor: pointer;
   filter: brightness(0.6);
+}
+
+@media (max-width: 1250px) {
+  .container {
+    width: 1000px;
+  }
+
+  .left {
+    width: 90%;
+    height: 50%;
+  }
+  .left .main {
+    width: 100%;
+    height: 90%;
+  }
+  .left .main .profile {
+    display: flex;
+    height: 60%;
+  }
+  .left .main .profile .picture {
+    width: 15%;
+    height: 60%;
+  }
+  .left .main .profile p {
+    margin-top: 20%;
+  }
+  .left .main .button-div {
+    height: fit-content;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 800px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .left {
+    margin-bottom: 20px;
+  }
+  .left .main {
+    height: 100%;
+  }
+  .left .main .profile .picture {
+    height: 55%;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    width: 90%;
+  }
+
+  .left .main .profile .picture {
+    height: 40%;
+  }
+}
+@media (max-width: 600px) {
+  .left {
+    height: 100%;
+  }
+  .left .main {
+    height: 100%;
+  }
+  .left .main .profile {
+    height: 50%;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
 }
 
 /*# sourceMappingURL=default.css.map */
