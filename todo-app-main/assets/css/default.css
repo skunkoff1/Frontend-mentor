@@ -13,7 +13,7 @@ html {
 }
 
 .container {
-  width: 510px;
+  width: 37vw;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -76,6 +76,7 @@ header {
   font-family: "Josefin Sans", sans-serif;
   width: 100%;
   padding: 15px 0 10px 0;
+  vertical-align: text-bottom;
 }
 .input .text:focus {
   outline: none;
