@@ -1,0 +1,237 @@
+@import "variables";
+body,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $dark1;
+    font-family: $font;
+    background-image: url(../images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 510px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*=========================== HEADER ===========================*/
+
+#title {
+    color: white;
+    letter-spacing: 0.4em;
+}
+
+.upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    margin-top: 50px;
+    font-size: 1.15em;
+    font-weight: 700;
+}
+
+#moon {
+    display: none;
+}
+
+.input {
+    margin-top: 15px;
+    width: 100%;
+    height: 60px;
+    background-color: $dark2;
+    display: flex;
+    border-radius: 5px;
+    .checkDiv {
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .check {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 1px solid $dark5;
+    }
+    .textDiv {
+        width: 85%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .text {
+        background-color: $dark2;
+        border: none;
+        color: $dark3;
+        font-weight: 400;
+        font-size: 1em;
+        font-family: $font;
+        width: 100%;
+        padding: 15px 0 10px 0;
+    }
+    .text:focus {
+        outline: none;
+    }
+}
+
+
+/*============================ ITEM ===============================*/
+
+#main {
+    margin-top: 20px;
+    width: 100%;
+    height: fit-content;
+    min-height: 80vh;
+}
+
+#itemList {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.active:first-child,
+.completed:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.active,
+.completed {
+    width: 100%;
+    height: 60px;
+    background-color: $dark2;
+    display: flex;
+    border-bottom: 1px solid $dark6;
+    .checkDiv {
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .check {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 1px solid $dark5;
+    }
+    .check:hover {
+        cursor: pointer;
+    }
+    .tick {
+        display: none;
+        margin-left: 5px;
+        margin-top: 2px;
+    }
+    .checked {
+        background: rgb(87, 221, 255);
+        background: -moz-linear-gradient(180deg, rgba(87, 221, 255, 1) 0%, rgba(192, 88, 243, 1) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(87, 221, 255, 1) 0%, rgba(192, 88, 243, 1) 100%);
+        background: linear-gradient(180deg, rgba(87, 221, 255, 1) 0%, rgba(192, 88, 243, 1) 100%);
+    }
+    .textDiv {
+        width: 85%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .itemText {
+        border: none;
+        color: $dark3;
+        font-weight: 400;
+        font-size: 1.1em;
+        font-family: $font;
+        margin: 0;
+        padding: 15px 0 10px 0;
+    }
+    .itemTextComplete {
+        border: none;
+        color: $dark5;
+        font-weight: 400;
+        font-size: 1.1em;
+        font-family: $font;
+        text-decoration: line-through;
+        padding: 15px 0 10px 0;
+    }
+    .crossDiv {
+        width: 7%;
+    }
+    .cross {
+        display: none;
+        margin-top: 22px;
+    }
+}
+
+.active:hover,
+.completed:hover {
+    cursor: pointer;
+    .check {
+        border: 1px solid $bright_blue;
+    }
+    .cross {
+        display: block;
+    }
+}
+
+
+/*=================== ITEM LIST FOOTER =====================*/
+
+.listFooter {
+    background-color: $dark2;
+    width: 100%;
+    height: 45px;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: $dark5;
+    font-size: 0.9em;
+    .listSelect {
+        display: flex;
+        justify-content: space-between;
+        #all {
+            color: $bright_blue;
+        }
+    }
+    p {
+        margin: 0;
+        padding: 5px 8px 0 8px;
+    }
+    #all:hover,
+    #act:hover,
+    #com:hover,
+    #clear:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+        color: $dark3;
+    }
+}
+
+.message {
+    margin-top: 50px;
+    color: $dark5;
+    text-align: center;
+}
+
+
+/*======================= FOOTER ==========================*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50px;
+    bottom: 0px;
+    color: white;
+}

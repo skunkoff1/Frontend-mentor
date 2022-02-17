@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #161722;
+  font-family: "Josefin Sans", sans-serif;
+  background-image: url(../images/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 510px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/*=========================== HEADER ===========================*/
+#title {
+  color: white;
+  letter-spacing: 0.4em;
+}
+
+.upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  margin-top: 50px;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+#moon {
+  display: none;
+}
+
+.input {
+  margin-top: 15px;
+  width: 100%;
+  height: 60px;
+  background-color: #25273c;
+  display: flex;
+  border-radius: 5px;
+}
+.input .checkDiv {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input .check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #4d5066;
+}
+.input .textDiv {
+  width: 85%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.input .text {
+  background-color: #25273c;
+  border: none;
+  color: #cacde8;
+  font-weight: 400;
+  font-size: 1em;
+  font-family: "Josefin Sans", sans-serif;
+  width: 100%;
+  padding: 15px 0 10px 0;
+}
+.input .text:focus {
+  outline: none;
+}
+
+/*============================ ITEM ===============================*/
+#main {
+  margin-top: 20px;
+  width: 100%;
+  height: fit-content;
+  min-height: 80vh;
+}
+
+#itemList {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.active:first-child,
+.completed:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.active,
+.completed {
+  width: 100%;
+  height: 60px;
+  background-color: #25273c;
+  display: flex;
+  border-bottom: 1px solid #393a4c;
+}
+.active .checkDiv,
+.completed .checkDiv {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active .check,
+.completed .check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #4d5066;
+}
+.active .check:hover,
+.completed .check:hover {
+  cursor: pointer;
+}
+.active .tick,
+.completed .tick {
+  display: none;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.active .checked,
+.completed .checked {
+  background: #57ddff;
+  background: -moz-linear-gradient(180deg, #57ddff 0%, #c058f3 100%);
+  background: -webkit-linear-gradient(180deg, #57ddff 0%, #c058f3 100%);
+  background: linear-gradient(180deg, #57ddff 0%, #c058f3 100%);
+}
+.active .textDiv,
+.completed .textDiv {
+  width: 85%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.active .itemText,
+.completed .itemText {
+  border: none;
+  color: #cacde8;
+  font-weight: 400;
+  font-size: 1.1em;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 15px 0 10px 0;
+}
+.active .itemTextComplete,
+.completed .itemTextComplete {
+  border: none;
+  color: #4d5066;
+  font-weight: 400;
+  font-size: 1.1em;
+  font-family: "Josefin Sans", sans-serif;
+  text-decoration: line-through;
+  padding: 15px 0 10px 0;
+}
+.active .crossDiv,
+.completed .crossDiv {
+  width: 7%;
+}
+.active .cross,
+.completed .cross {
+  display: none;
+  margin-top: 22px;
+}
+
+.active:hover,
+.completed:hover {
+  cursor: pointer;
+}
+.active:hover .check,
+.completed:hover .check {
+  border: 1px solid #3a7bfd;
+}
+.active:hover .cross,
+.completed:hover .cross {
+  display: block;
+}
+
+/*=================== ITEM LIST FOOTER =====================*/
+.listFooter {
+  background-color: #25273c;
+  width: 100%;
+  height: 45px;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #4d5066;
+  font-size: 0.9em;
+}
+.listFooter .listSelect {
+  display: flex;
+  justify-content: space-between;
+}
+.listFooter .listSelect #all {
+  color: #3a7bfd;
+}
+.listFooter p {
+  margin: 0;
+  padding: 5px 8px 0 8px;
+}
+.listFooter #all:hover,
+.listFooter #act:hover,
+.listFooter #com:hover,
+.listFooter #clear:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  color: #cacde8;
+}
+
+.message {
+  margin-top: 50px;
+  color: #4d5066;
+  text-align: center;
+}
+
+/*======================= FOOTER ==========================*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50px;
+  bottom: 0px;
+  color: white;
+}
+
+/*# sourceMappingURL=default.css.map */
