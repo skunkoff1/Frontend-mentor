@@ -10,6 +10,9 @@ input.value = null;
 let allButton = document.getElementById('all');
 let activeButton = document.getElementById('act');
 let completedButton = document.getElementById('com');
+let allButtonMobile = document.getElementById('allM');
+let activeButtonMobile = document.getElementById('actM');
+let completedButtonMobile = document.getElementById('comM');
 let clearButton = document.getElementById('clear');
 clearButton.addEventListener('click', clear);
 
@@ -18,6 +21,9 @@ let displayMode = document.querySelector('.mode');
 displayMode.addEventListener('click', changeDisplay);
 // Mode Dark par défaut
 let displayModeSelected = "dark";
+// Récupération des icones dark / light
+let sunIcon = document.getElementById('sun');
+let moonIcon = document.getElementById('moon');
 
 // Fonction sauvegarde en local Storage
 window.addEventListener("change", updateStorage, false);
@@ -49,7 +55,12 @@ class Item {
         this.crossDiv = document.createElement('div');
         this.cross = document.createElement('div');
         this.textElmt = document.createElement('p');
-        // Attribution des classes         
+        // Attribution des classes 
+        if (displayModeSelected == "dark") {
+            this.itemDiv.id = "dark";
+        } else {
+            this.itemDiv.id = "light";
+        }
         this.itemDiv.className = "active";
         this.doneDiv.className = "checkDiv";
         this.textDiv.className = "textDiv";
@@ -85,10 +96,12 @@ class Item {
             countDisplay.innerHTML = itemArray.length + " items left";
         }
         // Récupération du list footer 
-        document.querySelector('.listFooter').style.display = "flex";
+        document.getElementById('listFooter').style.display = "flex";
         // Ajout des écouteurs d'évènements
         this.doneDiv.addEventListener('click', this.checkItem.bind(this));
+        this.doneDiv.addEventListener('touch', this.checkItem.bind(this));
         this.crossDiv.addEventListener('click', this.clearItem.bind(this));
+        this.crossDiv.addEventListener('touch', this.clearItem.bind(this));
     }
 
     // Fonction changeant le statut et l'affichage selon le statut
@@ -120,7 +133,13 @@ class Item {
                 itemArray.splice(i, 1);
             }
         }
-        this.itemDiv.remove()
+        this.itemDiv.remove();
+        let countDisplay = document.getElementById('itemLeft');
+        if (itemArray.length < 2) {
+            countDisplay.innerHTML = itemArray.length + " item left";
+        } else {
+            countDisplay.innerHTML = itemArray.length + " items left";
+        }
     }
 
 }
@@ -129,7 +148,7 @@ class Item {
 /*=========================== GESTION DRAG AND DROP ===========================*/
 /*=============================================================================*/
 
-$(function() {
+$(function () {
     $("#itemList").sortable();
     $("#itemList").disableSelection();
 });
@@ -157,6 +176,9 @@ function display(mode) {
         allButton.style.color = "hsl(220,98%,61%)";
         activeButton.style.color = "hsl(233,14%,35%)";
         completedButton.style.color = "hsl(233,14%,35%)";
+        allButtonMobile.style.color = "hsl(220,98%,61%)";
+        activeButtonMobile.style.color = "hsl(233,14%,35%)";
+        completedButtonMobile.style.color = "hsl(233,14%,35%)";
         for (const elmt of items) {
             elmt.style.display = "flex";
         }
@@ -165,6 +187,9 @@ function display(mode) {
         activeButton.style.color = "hsl(220,98%,61%)";
         allButton.style.color = "hsl(233,14%,35%)";
         completedButton.style.color = "hsl(233,14%,35%)";
+        activeButtonMobile.style.color = "hsl(220,98%,61%)";
+        allButtonMobile.style.color = "hsl(233,14%,35%)";
+        completedButtonMobile.style.color = "hsl(233,14%,35%)";
         for (const elmt of items) {
             if (elmt.className.includes("active")) {
                 elmt.style.display = "flex";
@@ -177,6 +202,9 @@ function display(mode) {
         completedButton.style.color = "hsl(220,98%,61%)";
         allButton.style.color = "hsl(233,14%,35%)";
         activeButton.style.color = "hsl(233,14%,35%)";
+        completedButtonMobile.style.color = "hsl(220,98%,61%)";
+        allButtonMobile.style.color = "hsl(233,14%,35%)";
+        activeButtonMobile.style.color = "hsl(233,14%,35%)";
         for (const elmt of items) {
             if (elmt.className.includes("completed")) {
                 elmt.style.display = "flex";
@@ -208,7 +236,7 @@ function clear() {
 /*=============================================================================*/
 
 function sortArray() {
-    itemArray.sort(function(a, b) {
+    itemArray.sort(function (a, b) {
         if (a[3] === b[3]) {
             return 0;
         } else {
@@ -222,7 +250,39 @@ function sortArray() {
 /*=============================================================================*/
 
 function changeDisplay() {
+    let body = document.getElementById('body');
+    let inputHeader = document.getElementById('inputHeader');
+    let listFooter = document.getElementById('listFooter');
+    let items = document.getElementsByTagName('li');
+    let message = document.getElementById('message');
+    let listFooterMobile = document.getElementById('listFooterMobile');
+    if (displayModeSelected == "dark") {
+        displayModeSelected = "light";
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "block";
+        body.className = "light";
+        inputHeader.className = "inputLight";
+        listFooter.className = "listFooterLight";
+        listFooterMobile.className = "listFooterMobileLight";
+        message.className = "messageLight";
+        for (const elmt of items) {
+            elmt.id = "light"
+        }
 
+    } else {
+        displayModeSelected = "dark";
+        sunIcon.style.display = "block";
+        moonIcon.style.display = "none";
+        body.className = "dark";
+        inputHeader.className = "inputDark";
+        listFooter.className = "listFooterDark";
+        listFooterMobile.className = "listFooterMobileDark";
+        message.className = "messageDark";
+        for (const elmt of items) {
+            elmt.id = "dark"
+        }
+
+    }
 }
 
 /*=============================================================================*/
